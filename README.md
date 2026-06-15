@@ -1,3 +1,59 @@
+## How it works
+
+The app displays a list of newsletters grouped by site. Each newsletter has a CTA button that changes based on the current user's access rights — `S'inscrire` if the user has access, `S'abonner` otherwise.
+
+The active user profile is stored in the URL as a search parameter (`?user=ONE`, `?user=MULTIPLE`, `?user=NONE`), which triggers a full SSR re-render on each profile switch. A demo switcher in the header lets you toggle between the three mock profiles to see the access logic in action.
+
+## Stack
+
+- **Next.js 14** — App Router, SSR
+- **TypeScript** — strict mode
+- **styled-components** — component styling
+- **PandaCSS** — layout & utilities
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+````
+
+## Project Structure
+
+src/
+
+├── app/              # Next.js App Router pages and layouts
+
+├── components/       # UI components
+
+├── mocks/            # Mock data (users and newsletters)
+
+├── services/         # Data fetching layer
+
+├── types/            # TypeScript types
+
+└── utils/            # Business logic helpers
+
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and update the values.
+
+
+| Variable               | Description           | Default                 |
+| ---------------------- | --------------------- | ----------------------- |
+| `NEXT_PUBLIC_BASE_URL` | Base URL for metadata | `http://localhost:3000` |
+
+
+
 # Getting started
 
 Hello there, you are a new recruit in our frontend team at Les Echos, and your first task is to implement our newsletter page.
@@ -65,3 +121,8 @@ Take around 4 hours to do this test, we really respect your time and don't want 
 Good luck and again, please do this as you were already an developer in our team.
 
 If you have any question feel free to contact us and we will quickly respond
+
+```
+
+```
+````
