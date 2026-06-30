@@ -17,6 +17,9 @@ The active user profile is stored in the URL as a search parameter (`?user=ONE`,
 npm install
 ```
 
+> `prepare` is a npm lifecycle script that runs automatically after `npm install`.
+> It generates the PandaCSS styles required for the app to work.
+
 ### Development
 
 ```bash
