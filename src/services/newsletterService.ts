@@ -25,13 +25,3 @@ export const fetchNewslettersBySite = async (): Promise<NewslettersBySite> => {
   const newsletters = await fetchNewsletters();
   return groupBySite(newsletters);
 };
-
-/**
- * Fetches the newsletters for a specific site.
- */
-export const fetchNewslettersBySiteName = async (
-  site: string,
-): Promise<Newsletter[]> => {
-  const newsletters = await fetchNewsletters();
-  return newsletters.filter((n) => n.site === site);
-};
